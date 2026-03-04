@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite Especial</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="tela0" class="tela ativa">
+    <canvas id="fireCanvas"></canvas>
+
+    <div class="intro-texto" id="introTexto">
+        <h1>Seja Bem vinda Sra.Rita Paula Belniak</h1>
+        <p>(Sinta-se a vontade para ler e acessar as coisas)</p>
+    </div>
+
+    <button id="btnIntro">
+        Juro solenemente não fazer nada de bom.
+    </button>
+</section>
+
+
+<section id="tela1" class="tela">
+    <div class="container">
+      <h1 class="titulo" id="titulo">
+    Rita você aceita sair comigo?
+      </h1>
+
+
+        <div class="area-botoes">
+            <button id="nao">Não obrigado</button>
+            <button id="sim">Aceito sair com você</button>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<section id="tela2" class="tela">
+    <div class="container">
+        <h1 class="titulo">
+            Em qual local da grande capital podemos comemorar esse evento histórico?
+        </h1>
+
+        <div class="pergunta-box">
+            <p class="pergunta">
+                Não vale deixar em branco, se a opção outro for escolhida conversamos sobre
+            </p>
+
+            <div class="opcoes">
+                <label class="radio-option">
+                    <input type="radio" name="local" value="Museu Oscar Niemeyer">
+                    <span></span>
+                    Museu Oscar Niemeyer
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="local" value="Museu Egípcio">
+                    <span></span>
+                    Museu Egípcio
+                </label>
+
+                <label class="radio-option">
+                    <input type="radio" name="local" value="Outro">
+                    <span></span>
+                    Outro
+                </label>
+            </div>
+
+            <button id="confirmarEscolha">Confirmar escolha</button>
+            <button class="btnVoltar" onclick="voltarTela()">Voltar</button>
+
+        </div>
+    </div>
+</section>
+
+<section id="telaOutro" class="tela">
+    <div class="container">
+        <h1 class="titulo">
+            Imaginei que você ainda poderia tentar mesmo assim 
+        </h1>
+
+        <p class="descricao">
+            Então tá, onde mais a vossa realeza gostaria de ir?
+            (Não vale colocar qualquer coisa tipo "Outro" ou "Não sei", seja criativa)
+        </p>
+
+        <input type="text" id="inputOutro" placeholder="Digite o local aqui..." />
+
+        <button id="confirmarOutro">Confirmar local</button>
+        <button class="btnVoltar" onclick="voltarTela()">Voltar</button>
+
+    </div>
+</section>
+
+<section id="telaDia" class="tela">
+    <div class="container">
+        <h1 class="titulo">
+            Qual dia estaria disponível?
+        </h1>
+
+        <p class="descricao">
+            Para nós desafortunados de tempo um fim de semana deve haver
+        </p>
+
+        <div class="opcoes">
+            <label class="radio-option">
+                <input type="radio" name="dia" value="07/03 Sábado">
+                <span></span>
+                Dia 07/03 Sábado
+            </label>
+
+            <label class="radio-option">
+                <input type="radio" name="dia" value="08/03 Domingo">
+                <span></span>
+                Dia 08/03 Domingo
+            </label>
+
+            <label class="radio-option">
+                <input type="radio" name="dia" value="14/03 Sábado">
+                <span></span>
+                Dia 14/03 Sábado
+            </label>
+
+            <label class="radio-option">
+                <input type="radio" name="dia" value="15/03 Domingo">
+                <span></span>
+                Dia 15/03 Domingo
+            </label>
+        </div>
+
+        <p class="aviso">
+            As opções "outro" e "nunca" foram removidas por precaução
+        </p>
+
+        <button id="confirmarDia">Confirmar dia</button>
+        <button class="btnVoltar" onclick="voltarTela()">Voltar</button>
+
+    </div>
+</section>
+
+
+<section id="telaFinal" class="tela">
+    <div class="container">
+        <h1 class="titulo">Em fim a carta de Hogwarts</h1>
+
+        <h3>Gostaria de te agradecer, principalmente pelo tempo que tirou para ver tudo isso</h3>
+
+        <p>Você poderia me mandar esse mini relatório pra eu saber o resultado?</p>
+
+        <div class="relatorio" id="relatorioBox"></div>
+
+        <button onclick="compartilharResultado()">Compartilhar resultado</button>
+
+        <button onclick="irTelaFinal()">Avançar</button>
+
+        <button class="btnVoltar" onclick="voltarTela()">Voltar</button>
+    </div>
+</section>
+
+<section id="telaEncerramento" class="tela encerramento">
+    <div class="centro">
+        Malfeito feito.
+    </div>
+</section>
+
+<script src="script.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</body>
+</html>
